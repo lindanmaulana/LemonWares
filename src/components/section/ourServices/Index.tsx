@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { handleRouteOurServices } from "../../../redux/slices/ourServicesFeatures";
 import { AppDispatch, RootState } from "../../../redux/store/store";
 import SubOurServices from "./subOurServices/Index";
+import usePropsDriling from "../../../context/usePropsDriling";
 
 const OurServices = () => {
   const [isActive, setIsActive] = useState<{
@@ -12,6 +13,12 @@ const OurServices = () => {
     type: "monthly",
     route: "basic",
   });
+
+  // props driling
+  const propsDrilingContext = usePropsDriling();
+  if (!propsDrilingContext) throw new Error("Terjadi Kesalahan pada route");
+  const { ourServicesRef } = propsDrilingContext;
+  
   const selector = useSelector((state: RootState) => state.ourServices);
   const dispatch = useDispatch<AppDispatch>();
 
@@ -35,8 +42,8 @@ const OurServices = () => {
   };
 
   return (
-    <section className="py-[66px]">
-      <div className="container max-w-6xl">
+    <section ref={ourServicesRef} className="py-[66px]">
+      <div className="container max-w-5xl">
         <div className="text-center max-w-[700px] mx-auto mb-14">
           <h2 className="text-5xl font-semibold text-[#000000] mb-8">
             Ready to get started with Lemon Wares?
@@ -54,7 +61,10 @@ const OurServices = () => {
             >
               <span className="block w-6 h-6 rounded-full bg-third"></span>
             </button>
+            <div className="relative flex items-center gap-3">
             <h4>Yearly</h4>
+            <span className="absolute top-0 -right-[88px] bg-yellow-300 text-[10px] px-2 py-1 rounded-lg">20% discount</span>
+            </div>
           </div>
           <div className="grid grid-cols-2 items-center text-xl font-semibold  text-[#000000]">
             <button

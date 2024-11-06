@@ -15,7 +15,7 @@ const HeroBanner = () => {
 
   if (!propsDrilingContext) {
     setIsError(true);
-    throw new Error("Terjadi kesalahan pada propsdriling");
+    throw new Error("Terjadi kesalahan pada route");
   }
 
   const { heroBannerRef } = propsDrilingContext;

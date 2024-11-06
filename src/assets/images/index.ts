@@ -33,3 +33,34 @@ export const ImageServices = {
   freeSSLCertificates,
   friendlySupport,
 };
+
+import cli from "./CLI.png";
+import jpnl from "./JPNL.png";
+import leeveOnBranding from "./LeeveOnBranding.png";
+import quote from "./quote.svg";
+
+export const ImageBlogNews = {
+  cli,
+  jpnl,
+  leeveOnBranding,
+  quote,
+};
+
+import jrangGlasses from "./jrangGlasses.png";
+import koraneScents from "./koraneScents.png";
+import nadineGhaide from "./nadineGhaida.png";
+
+export const ImageWeserve = {
+  jrangGlasses,
+  koraneScents,
+  nadineGhaide,
+};
+
+import elementSmallRight from "./Element-small-right.svg";
+import elementSmallLeft from "./Element-small-left.svg";
+import elementBigRight from "./Element-big-right.svg";
+export const ImageContact = {
+  elementSmallLeft,
+  elementBigRight,
+  elementSmallRight,
+};
