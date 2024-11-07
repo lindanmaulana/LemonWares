@@ -8,7 +8,7 @@ const Contact = () => {
     const {contactRef} = propsDrilingContext
 
     return (
-        <section ref={contactRef} className="py-[52px]">
+        <section ref={contactRef} className="pt-[52px] pb-[55px]">
             <div className="container relative max-w-4xl">
                 <img src={ImageContact.elementSmallLeft} alt="Element Small" width={20} className="absolute bottom-0" />
                 <img src={ImageContact.elementSmallRight} alt="Element Small" width={20} className="absolute -top-14 left-[270px]" />

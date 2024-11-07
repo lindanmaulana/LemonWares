@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Index";
 import Header from "../components/header/Index";
 import BlogNews from "../components/section/blog&News/Index";
 import Contact from "../components/section/contact/Index";
@@ -16,6 +17,7 @@ const HomePages = () => {
       <BlogNews />
       <Weserve />
       <Contact />
+      <Footer />
     </>
   );
 };

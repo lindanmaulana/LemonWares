@@ -13,6 +13,11 @@ import softaculous from "./softaculous.png";
 import wordPress from "./wordPress.png";
 import cloudFlare from "./cloudFlare.png";
 
+import logoWhite from "./logo-white.png";
+export const ImageLogo = {
+  logoWhite,
+};
+
 export const ImagePowerfullCloudHostingSolutions = {
   cpanel,
   securedImunify,
